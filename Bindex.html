@@ -12,16 +12,22 @@
     <h1>Cards on the table:</h1>
     </p>
     <div class="spanT">
-        <span id="firstCard-El"></span>
-        <span id="secondCard-El"></span>
-        <span id="anotherCard-El"></span>
-        <p class="sumT" id="sumOfCards"></p>
+        <div>
+            <span id="firstCard-El"></span>
+            <span id="secondCard-El"></span>
+            <span id="anotherCard-El"></span>
+        </div>
+        <div class="sumT" id="sumOfCards"></div>
+    </div>
+    <div class="message">
+        <p id="message"></p>
     </div>
     <div>
-        <button type="button" onclick="showcards()">Show cards</button>
-       
 
-        <button type="button" onclick="addCard()">Add card</button> 
+        <button type="button" id="showCards-El" onclick="showcards()">Show cards</button>
+
+
+        <button type="button" id="addCard-El" onclick="addCard()">Add card</button>
     </div>
 </body>
 <script src="./BJindex.js"></script>
