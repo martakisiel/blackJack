@@ -3,6 +3,8 @@ let firstCard =5
 let secondCard = 10
 let anotherCard = 10
 let sum = firstCard + secondCard
+let hasBJ = false
+let  isAlive = true
                                 //dzialajacy przyklad if:
                                 // if (sum < 21){
                                 //     console.log("new card?")
@@ -17,6 +19,7 @@ let sum = firstCard + secondCard
 function showcards() {
     //document.getElementById("spanT").style.visibility = "visible";
     //document.getElementById("sumT").style.visibility = "visible";
+    document.getElementById("cardsOnTable-El").textContent = "Cards on the table:" + " "
     document.getElementById("firstCard-El").textContent = firstCard + " "
     document.getElementById("secondCard-El").textContent = secondCard + " "
     document.getElementById("sumOfCards").textContent = "Sum=" + sum
@@ -31,6 +34,7 @@ function showcards() {
         document.getElementById("sumOfCards").textContent = "Sum=" + sum  
         if (sum!=21){
             document.getElementById("message").textContent = "Ups...try again!"
+            isAlive = false
         }
   
     }
@@ -45,10 +49,12 @@ function showcards() {
     
     document.getElementById("sumOfCards").textContent = "Sum=" + sum
     document.getElementById("message").textContent = "You won!"
+    hasBJ = true
     hideBtn()
     
 } else if (sum > 21){
 console.log("You lost. Try again!")
+isAlive = false
 }
 // //poniżej w miare działa
 // function showcards() {
